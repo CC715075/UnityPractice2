@@ -4,36 +4,39 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    public GameObject cam;
     Rigidbody rb;
     public float speed;
+    Animation ani;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10;
+
+        ani = gameObject.GetComponent<Animation>();
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        if (h != 0)
-        {
-        Move(h);
-
-        }
+        PlayerLootAt();
+        Move();
     }
 
-    void Move(float h)
-    {
-        if (h < 0)
-        {
-            rb.velocity = new Vector3(speed, rb.velocity.y, rb.velocity.z);
-        }
-        else if (h > 0)
-        {
-            rb.velocity = new Vector3(-speed, rb.velocity.y, rb.velocity.z);
 
-        }
+    void PlayerLootAt()
+    {
+        Vector3 offset = cam.transform.forward;
+        offset.y = 0;
+        transform.LookAt(transform.position + offset);
+    }
+
+
+    void Move()
+    {
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+        Vector3 normalVec = (transform.right * h + transform.forward * v).normalized;
+        rb.velocity = (normalVec)*speed;
     }
 }
