@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
             ymove -= Input.GetAxis("Mouse Y")* Sensitivity; 
         }
         if (ymove > yLimitation) ymove = yLimitation;
-        if (ymove < 0) ymove = 0;
+        if (ymove < -10) ymove = -10;
         transform.rotation = Quaternion.Euler(ymove, xmove , 0); 
 
         //camera location
