@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Characters\wizard\Environment\Scripts\CamCTRLDemo.cs" />
     <Compile Include="Assets\script\playerMovement.cs" />
     <Compile Include="Assets\script\CameraMovement.cs" />
     <Compile Include="Assets\Characters\wizard\Environment\Scripts\MoveCTRLDemo.cs" />
-    <Compile Include="Assets\Characters\wizard\Environment\Scripts\CamCTRLDemo.cs" />
+    <Compile Include="Assets\script\EnemyPattern.cs" />
+    <Compile Include="Assets\script\playerBasic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\wizard\READ ME(wizard)\character setup guide link.txt" />
