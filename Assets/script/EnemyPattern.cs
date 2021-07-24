@@ -8,10 +8,11 @@ public class EnemyPattern : MonoBehaviour
     public int health = 50;
     public int attack = 10;
     public float attackSpeed = 0.5f;
+    public GameObject Cosmic;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

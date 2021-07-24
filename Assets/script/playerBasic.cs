@@ -10,6 +10,16 @@ public class playerBasic : MonoBehaviour
     public int attack = 10;
     public float attackSpeed = 0.5f;
 
+    public float myMaxValue { get; set; }
+
+    public float myCurrentValue
+    {
+        get
+        {
+            return currentValue;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
