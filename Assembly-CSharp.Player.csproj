@@ -57,11 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Characters\wizard\Environment\Scripts\CamCTRLDemo.cs" />
+    <Compile Include="Assets\script\playerBasic.cs" />
+    <Compile Include="Assets\script\EnemyPattern.cs" />
     <Compile Include="Assets\script\playerMovement.cs" />
     <Compile Include="Assets\script\CameraMovement.cs" />
     <Compile Include="Assets\Characters\wizard\Environment\Scripts\MoveCTRLDemo.cs" />
-    <Compile Include="Assets\script\EnemyPattern.cs" />
-    <Compile Include="Assets\script\playerBasic.cs" />
+    <Compile Include="Assets\script\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\wizard\READ ME(wizard)\character setup guide link.txt" />
