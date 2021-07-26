@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<Root>
+<text>
+  <name></name>
+  <hp></hp>
+  <mp></mp>
+  <attack></attack>
+  <attackSpeed></attackSpeed>
+</text>
+<text>
+  <name></name>
+  <hp></hp>
+  <mp></mp>
+  <attack></attack>
+  <attackSpeed></attackSpeed>
+</text>
+</Root>

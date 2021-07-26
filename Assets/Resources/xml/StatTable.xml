@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<text>
+		<name>dogknight</name>
+		<hp>50</hp>
+		<mp>50</mp>
+		<attack>10</attack>
+		<attackSpeed>0.5</attackSpeed>
+	</text>
+	<text>
+		<name>faker</name>
+		<hp>500</hp>
+		<mp>300</mp>
+		<attack>100</attack>
+		<attackSpeed>0.3</attackSpeed>
+	</text>
+</Root>
