@@ -11,11 +11,15 @@ public class PlayerStat : CharacterStat
     }
     public override void Die()
     {
+        Debug.Log(transform.name + "child die");
 
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(10);
+        }
     }
 }

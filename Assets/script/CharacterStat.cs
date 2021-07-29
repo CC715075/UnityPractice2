@@ -26,7 +26,7 @@ public class CharacterStat : MonoBehaviour
     }
     public virtual void Die()
     {
-        Debug.Log(transform.name + "die");
+        Debug.Log(transform.name + "parents die");
 
     }
 
