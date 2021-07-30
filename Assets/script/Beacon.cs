@@ -7,32 +7,44 @@ public class Beacon : MonoBehaviour
 {
     TextMeshPro Counts;
     GameObject txt;
+    public float Seconds;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject txt = transform.Find("Text").gameObject;
-        GameObject obj = transform.Find("BeaconCylinder").gameObject;
+        GameObject txt = GameObject.Find("Text");
 
-        Counts = txt.GetComponent<TextMeshPro>();
+        Counts = txt.transform.GetComponent<TextMeshPro>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Counts.text = "sdf";
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Invoke("TimeCounts(obj)", 5);
+            //Counts.text = "123";
+            GameObject enemy = GameObject.Find("Mueh'zala");
+            GameObject cam = GameObject.Find("Main Camera");
+            //cam.transform.LookAt(enemy.transform);
+            other.transform.position = new Vector3(41,-3.1f,-97);
+            other.transform.LookAt(enemy.transform);
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
         }
     }
-    private void TimeCounts(GameObject counter)
+
+    private string CountdownTimer(bool isUpdate = true)
     {
-        counter.transform.position = new Vector3(41,0,-97);
+        if (isUpdate) { }
+
+        string timer = (Seconds - Time.deltaTime).ToString();
+        return timer;
     }
+    
 
 }
