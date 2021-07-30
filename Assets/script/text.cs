@@ -16,6 +16,6 @@ public class text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Counts.text = "123";
+        //Counts.text = "123";
     }
 }

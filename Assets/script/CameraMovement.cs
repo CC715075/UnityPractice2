@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public GameObject player;
-    private float xmove = 0;
-    private float ymove = 0;
+    public float xmove = 0;
+    public float ymove = 0;
     float distance;
     public float MaxDis;
     public float MinDis;
@@ -29,8 +29,17 @@ public class CameraMovement : MonoBehaviour
         CameraLocation();
     }
 
+    public void CameraForced(GameObject cancer)
+    {
+        Vector3 v = cancer.transform.position - player.transform.position;
+        float newAngle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+        xmove = 0;
+        if (newAngle < -10)
+        ymove = newAngle;
 
-    void CameraAngle()
+    }
+
+    public void CameraAngle()
     {
         if (Input.GetMouseButton(1) || Input.GetMouseButton(0))
         {
