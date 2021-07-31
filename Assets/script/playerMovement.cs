@@ -13,9 +13,9 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        ani = gameObject.GetComponent<Animator>();
+        ani = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class playerMovement : MonoBehaviour
         if (!isAir)
         {
             Move();
-            Jump();
+            Attack();
 
         }
     }
@@ -43,25 +43,32 @@ public class playerMovement : MonoBehaviour
 
 
     void Move()
-    {
-        ani.SetBool("isMoving", true);
+    {   
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3 normalVec = (transform.right * h + transform.forward * v).normalized;
         rb.velocity = (normalVec) * speed;
+        if (rb.velocity == Vector3.zero)
+        {
+            ani.SetBool("isWalking", false);
+        }
+        else 
+        {
+            ani.SetBool("isWalking", true);
+        }
+            
     }
 
-    void Jump()
+    void Attack()
     {
 
         if (Input.GetKeyDown("space"))
         {
-            ani.SetBool("isJumping", true);
-            Vector3 jumpVel = rb.velocity;
-            jumpVel.y = jump;
-            Debug.Log(jumpVel);
-            rb.AddForce(jumpVel, ForceMode.Impulse);
-
+            ani.SetBool("isAttacking", true);
+        }
+        else
+        {
+            ani.SetBool("isAttacking", false);
         }
 
     }
