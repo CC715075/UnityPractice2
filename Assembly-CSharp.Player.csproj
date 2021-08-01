@@ -56,14 +56,14 @@
     <Compile Include="Assets\Characters\wizard\Environment\Scripts\CamCTRLDemo.cs" />
     <Compile Include="Assets\script\PlayerStat.cs" />
     <Compile Include="Assets\script\CharacterStat.cs" />
-    <Compile Include="Assets\script\StatManager.cs" />
+    <Compile Include="Assets\script\XmlStatTableReader.cs" />
     <Compile Include="Assets\script\Beacon.cs" />
     <Compile Include="Assets\script\Stat.cs" />
     <Compile Include="Assets\script\EnemyPattern.cs" />
     <Compile Include="Assets\script\playerMovement.cs" />
     <Compile Include="Assets\script\CameraMovement.cs" />
     <Compile Include="Assets\Characters\wizard\Environment\Scripts\MoveCTRLDemo.cs" />
-    <Compile Include="Assets\script\text.cs" />
+    <Compile Include="Assets\script\EnemyStat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

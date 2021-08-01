@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class EnemyPattern : MonoBehaviour
 {
-
-    public int health = 50;
-    public int attack = 10;
-    public float attackSpeed = 0.5f;
     public GameObject Cosmic;
     public GameObject player;
     Animator ani;
@@ -20,9 +16,7 @@ public class EnemyPattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BasicAttack(player);
-        print(Vector3.Distance(player.transform.position, transform.position));
-        print(ani.GetBool("isAttacking"));
+        BasicAttack(player); // is this fit in Patterns or Stat?
     }
 
     void BasicAttack(GameObject player)
